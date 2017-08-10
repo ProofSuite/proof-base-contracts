@@ -42,8 +42,8 @@ contract BasicToken {
   function BasicToken(){
     totalSupply = 1000;
     symbol = "^";
-    owner = msg.sender;
-    balances[msg.sender] = 100;
+    owner = msg.sender; /* For Platform: Add hardcoded address so we can pay for creation */
+    balances[msg.sender] = totalSupply;
     decimals = 0; 
   }
 
